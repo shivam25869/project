@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duo Dector - Appointment Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightblue; /* Light blue background */
+        }
+
+        .right-side {
+            background-color: pink; /* Pink background for the right side */
+            float: right;
+            width: 50%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-pink-200 to-blue-300 min-h-screen flex flex-col">
+
+    <header class="bg-white py-4 px-6">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-xl font-bold text-pink-500">DUO</div>
+                <div class="text-xl font-bold text-gray-700">DECTOR</div>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Services</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12">
+        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-black mb-4">Easy Step By Step Appointment Booking</h2>
+                <p class="text-gray-700 mb-6">Choose Staff, Schedule Date & Time To Booking Your Services</p>
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-1/3">
+                        <input type="text" placeholder="Select Location" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring focus:ring-pink-500 focus:ring-opacity-50">
+                    </div>
+                    <div class="w-1/3">
+                        <input type="text" placeholder="Branches" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring focus:ring-pink-500 focus:ring-opacity-50">
+                    </div>
+                    <div class="w-1/3">
+                        <button class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4 flex justify-center items-center">
+                <img src="src/main image.png" alt="Image description" class="max-w-full h-auto">
+            </div>
+        </div>
+
+        <!-- Services Buttons -->
+        <div class="mt-8">
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center space-x-4">
+                <h3 class="text-xl font-bold text-gray-700">Search Results For:</h3>
+                <button class="px-4 py-2 rounded-md border border-gray-300 text-black hover:bg-pink-500">Dental</button>
+                <button class="px-4 py-2 rounded-md border border-gray-300 text-black hover:bg-pink-500">Therapy</button>
+                <button class="px-4 py-2 rounded-md border border-gray-300 text-black hover:bg-pink-500">Laser</button>
+                <button class="px-4 py-2 rounded-md border border-gray-300 text-black hover:bg-pink-500">Line</button>
+            </div>
+        </div>
+        <div class="mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/cleaning teeth.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Cleaning Teeth</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">400 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/cleaning teeth.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">420 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/dental exam doctor.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">200 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/dental exam family.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">500 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/dental exam girl.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">200 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/dental exam smile.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">500 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/dental examination.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">420 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/dental exam doctor.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">500 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="flex items-center">
+                        <img src="src/cleaning teeth.png" alt="Service Image" class="w-16 h-16 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-pink-500">Dental Examination</h4>
+                            <p class="text-gray-700 text-sm">We Pursue The Highest Quality, Safety And Performance.</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <span class="font-bold text-gray-800">500 ر.س</span>
+                        <span class="text-gray-600">35 Min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="mt-8 text-center">
+        <button id="continueBooking" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
+            <span>Continue Booking</span>
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </button>
+    </div>
+    <footer class="bg-white py-4 text-center mt-12">
+        <p class="text-gray-700">
+            <a href="main/slots.html" class="text-pink-500 hover:text-pink-700">Duodector 2024</a>. Designed by Righttheresolutions
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('continueBooking').addEventListener('click', function() {
+            window.location.href = 'slots.html';
+        });
+    </script>
+    
+</body>
+</html>
