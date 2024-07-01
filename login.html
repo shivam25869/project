@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Adding background image to right side */
+    .background-Right {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, #280018, #e832c3);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    /* Adding background image to left side */
+    .background-Left {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, #d91b9d, #4fb783);
+        background-size: cover;
+        background-position: 50% 50%; 
+    }
+
+    #background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -3;
+    }
+    #slide {
+        width: 50%;
+        max-height: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-left: 50%;
+        position: absolute;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    .top {
+        width: 200%;
+        height: 100%;
+        position: relative;
+        left: 0;
+        left: -100%;
+    }
+    .left {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        left: 0;
+        position: absolute;
+    }
+    .right {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        right: 0;
+        position: absolute;
+    }
+    .content {
+        width: 250px;
+        margin: 0 auto;
+        top: 30%;
+        position: absolute;
+        left: 50%;
+        margin-left: -125px;
+    }
+
+    .content h4 {
+        color: #ca1aa1;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: white;
+        width: auto;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .on-off {
+        background: none;
+        color: #4caf50;
+        box-shadow: none;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 0.5rem; /* Reduced padding */
+        text-align: center;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 0.875rem; /* Optional: reduce font size */
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        // Slide animation handlers
+        $("#RightToLeft").on("click", function () {
+            $("#slide").animate({
+                marginLeft: "0",
+            });
+            $(".top").animate({
+                marginLeft: "100%",
+            });
+        });
+
+        $("#LeftToRight").on("click", function () {
+            $("#slide").animate({
+                marginLeft: "50%",
+            });
+            $(".top").animate({
+                marginLeft: "0",
+            });
+        });
+
+        // Navigate to registration.html on "Next" button click
+        $("#nextButton").on("click", function () {
+            window.location.href = "registration.html";
+        });
+
+        // Navigate to registration.html on "Register" button click
+        $("#registerButton").on("click", function () {
+            window.location.href = "registration.html";
+        });
+    });
+</script>
+<body>
+    <header class="bg-white py-4 px-6">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-xl font-bold text-pink-500">DUO</div>
+                <div class="text-xl font-bold text-gray-700">DECTOR</div>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Services</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="background">
+        <div class="background-Right"></div>
+        <div class="background-Left"></div>
+    </div>
+
+    <div id="slide">
+        <div class="top">
+            <div class="left">
+                <div class="content">
+                    <h2>Sign Up</h2>
+                    <form method="post" onsubmit="return false;">
+                        <div>
+                            <input type="text" placeholder="email" />
+                            <br />
+                            <input type="password" placeholder="password" />
+                        </div>
+                    </form>
+
+                    <button id="LeftToRight" class="on-off">Login</button>
+                    <button id="registerButton">Register</button>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="content">
+                    <h4>Already Have An Account</h4>
+                    <form method="post" onsubmit="return false;">
+                        <div>
+                            <input type="text" placeholder="email" />
+                            <br />
+                            <input type="password" placeholder="password" />
+                        </div>
+
+                        <button id="RightToLeft" class="on-off">Register</button>
+                        <button id="nextButton">Next</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="bg-white py-4 text-center mt-12">
+    <p class="text-gray-700">
+        <a href="#" class="text-pink-500 hover:text-pink-700">Duodector 2024</a>. Designed by Righttheresolutions
+    </p>
+</footer>
+
+</html>
