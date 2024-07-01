@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    .button-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .btn-back {
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        color: #000;
+        box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+    }
+    .btn-next {
+        background: linear-gradient(145deg, #ff5f7e, #ff006e);
+        color: #fff;
+        box-shadow: 5px 5px 10px -5px -5px 10px #ff7b93;
+    }
+    .btn-back:hover, .btn-next:hover {
+        transform: translateY(-2px);
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .btn svg {
+        margin-right: 8px;
+    }
+    .otp-input {
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+    }
+</style>
+<body class="bg-gradient-to-r from-pink-100 to-cyan-100 min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="flex justify-between items-center mb-16">
+            <div class="flex items-center">
+                <img src="src/logo-4@2x.png" alt="Logo" class="h-12 mr-2">
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Services</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-pink-500">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Appointment Registration</h2>
+            <p class="text-gray-600 mb-4">Your Appointment Booking Almost Done!</p>
+            <p class="text-gray-600">We Send You OTP For Confirmation On Your Registered Phone Number.</p>
+            <p class="text-gray-600 mb-8">Didn't receive? <a href="#" class="text-pink-500 hover:text-pink-700 font-medium">Resend</a></p>
+            <div class="flex justify-between mb-8">
+                <div>
+                    <p class="text-gray-700 mb-2">Please enter OTP</p>
+                    <div class="flex space-x-4">
+                        <input type="text" class="otp-input" maxlength="1">
+                        <input type="text" class="otp-input" maxlength="1">
+                        <input type="text" class="otp-input" maxlength="1">
+                        <input type="text" class="otp-input" maxlength="1">
+                        <input type="text" class="otp-input" maxlength="1">
+                        <input type="text" class="otp-input" maxlength="1">
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="login.html" class="btn btn-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back
+                </a>
+                <a href="paynment.html" class="btn btn-next">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <footer class="bg-white py-4 text-center mt-12">
+            <p class="text-gray-700">
+                <a href="#" class="text-pink-500 hover:text-pink-700">Duodector 2024</a>. Designed by Righttheresolutions
+            </p>
+        </footer>        
+    </div>
+</body>
+</html>

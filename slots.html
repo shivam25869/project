@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duo Doctor</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      overflow: visible;
+      height: 100%;
+    }
+    .circle-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+  <style>
+    .button-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .btn-back {
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        color: #000;
+        box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+    }
+    .btn-next {
+        background: linear-gradient(145deg, #ff5f7e, #ff006e);
+        color: #fff;
+        box-shadow: 5px 5px 10px -5px -5px 10px #ff7b93;
+    }
+    .btn-back:hover, .btn-next:hover {
+        transform: translateY(-2px);
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .btn svg {
+        margin-right: 8px;
+    }
+    .otp-input {
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+    }
+    .button-container {
+    display: flex;
+    padding-bottom: 30px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px; /* Adjust this value to decrease the gap */
+    margin-bottom:30px; /* Adjust this value to decrease the gap */
+  }
+</style>
+</head>
+<body class="bg-gradient-to-r from-pink-100 to-cyan-100 font-Poppins">
+  <header class="bg-white py-4 px-6">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="text-xl font-bold text-pink-500">DUO</div>
+        <div class="text-xl font-bold text-gray-700">DECTOR</div>
+      </div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="text-gray-700 hover:text-pink-500">Home</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-pink-500">Services</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-pink-500">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold text-center mb-8">Schedule Appointment From Available Slots</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Select Date & Time</h2>
+        <div class="flex items-center justify-between mb-4">
+          <button class="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded hover:bg-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <h3 class="text-lg font-semibold">July 2023</h3>
+          <button class="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded hover:bg-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        <table class="w-full text-sm">
+          <thead>
+            <tr>
+              <th class="text-center py-2 px-4">SU</th>
+              <th class="text-center py-2 px-4">MO</th>
+              <th class="text-center py-2 px-4">TU</th>
+              <th class="text-center py-2 px-4">WE</th>
+              <th class="text-center py-2 px-4">TH</th>
+              <th class="text-center py-2 px-4">FR</th>
+              <th class="text-center py-2 px-4">SA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center py-2 px-4"><button id="date-25" class="circle-button hover:bg-pink-500  text-black">25</button></td>
+              <td class="text-center py-2 px-4"><button id="date-26" class="circle-button hover:bg-pink-500  text-black">26</button></td>
+              <td class="text-center py-2 px-4"><button id="date-27" class="circle-button hover:bg-pink-500  text-black">27</button></td>
+              <td class="text-center py-2 px-4"><button id="date-28" class="circle-button hover:bg-pink-500  text-black">28</button></td>
+              <td class="text-center py-2 px-4"><button id="date-29" class="circle-button hover:bg-pink-500  text-black">29</button></td>
+              <td class="text-center py-2 px-4"><button id="date-30" class="circle-button hover:bg-pink-500  text-black">30</button></td>
+              <td class="text-center py-2 px-4"><button id="date-1" class="circle-button hover:bg-pink-500  text-black">1</button></td>
+            </tr>
+            <tr>
+              <td class="text-center py-2 px-4"><button id="date-2" class="circle-button hover:bg-pink-500  text-black">2</button></td>
+              <td class="text-center py-2 px-4"><button id="date-3" class="circle-button hover:bg-pink-500  text-black">3</button></td>
+              <td class="text-center py-2 px-4"><button id="date-4" class="circle-button hover:bg-pink-500  text-black">4</button></td>
+              <td class="text-center py-2 px-4"><button id="date-5" class="circle-button hover:bg-pink-500  text-black">5</button></td>
+              <td class="text-center py-2 px-4"><button id="date-6" class="circle-button hover:bg-pink-500  text-black">6</button></td>
+              <td class="text-center py-2 px-4"><button id="date-7" class="circle-button hover:bg-pink-500  text-black">7</button></td>
+              <td class="text-center py-2 px-4"><button id="date-8" class="circle-button hover:bg-pink-500  text-black">8</button></td>
+            </tr>
+            <tr>
+              <td class="text-center py-2 px-4"><button id="date-9" class="circle-button hover:bg-pink-500  text-black">9</button></td>
+              <td class="text-center py-2 px-4"><button id="date-10" class="circle-button hover:bg-pink-500  text-black">10</button></td>
+              <td class="text-center py-2 px-4"><button id="date-11" class="circle-button hover:bg-pink-500  text-black">11</button></td>
+              <td class="text-center py-2 px-4"><button id="date-12" class="circle-button hover:bg-pink-500 text-black">12</button></td>
+              <td class="text-center py-2 px-4"><button id="date-13" class="circle-button hoverbg-pink-500 text-black">13</button></td>
+              <td class="text-center py-2 px-4"><button id="date-14" class="circle-button hover:bg-pink-500  text-black">14</button></td>
+              <td class="text-center py-2 px-4"><button id="date-15" class="circle-button hover:bg-pink-500 text-black">15</button></td>
+            </tr>
+            <tr>
+              <td class="text-center py-2 px-4"><button id="date-16" class="circle-button hover:bg-pink-500  text-black">16</button></td>
+              <td class="text-center py-2 px-4"><button id="date-17" class="circle-button hover:bg-pink-500 text-black">17</button></td>
+              <td class="text-center py-2 px-4"><button id="date-18" class="circle-button hover:bg-pink-500  text-black">18</button></td>
+              <td class="text-center py-2 px-4"><button id="date-19" class="circle-button hover:bg-pink-500 text-black">19</button></td>
+              <td class="text-center py-2 px-4"><button id="date-20" class="circle-button hover:bg-pink-500 text-black">20</button></td>
+              <td class="text-center py-2 px-4"><button id="date-21" class="circle-button hover:bg-pink-500  text-black">21</button></td>
+              <td class="text-center py-2 px-4"><button id="date-22" class="circle-button hover:bg-pink-500  text-black">22</button></td>
+            </tr>
+            <tr>
+              <td class="text-center py-2 px-4"><button id="date-23" class="circle-button hover:bg-pink-500  text-black">23</button></td>
+              <td class="text-center py-2 px-4"><button id="date-24" class="circle-button hover:bg-pink-500 text-black">24</button></td>
+              <td class="text-center py-2 px-4"><button id="date-25" class="circle-button hover:bg-pink-500 text-black">25</button></td>
+              <td class="text-center py-2 px-4"><button id="date-26" class="circle-button hover:bg-pink-500  text-black">26</button></td>
+              <td class="text-center py-2 px-4"><button id="date-27" class="circle-button hover:bg-pink-500  text-black">27</button></td>
+              <td class="text-center py-2 px-4"><button id="date-28" class="circle-button hover:bg-pink-500  text-black">28</button></td>
+              <td class="text-center py-2 px-4"><button id="date-29" class="circle-button hover:bg-pink-500  text-black">29</button></td>
+            </tr>
+            <tr>
+              <td class="text-center py-2 px-4"><button id="date-30" class="circle-button hover:bg-pink-500  text-black">30</button></td>
+              <td class="text-center py-2 px-4"><button id="date-31" class="circle-button hover:bg-pink-500  text-black">31</button></td>
+              <td class="text-center py-2 px-4"><button id="date-1" class="circle-button hover:bg-pink-500  text-black">1</button></td>
+              <td class="text-center py-2 px-4"><button id="date-2" class="circle-button hover:bg-pink-500  text-black">2</button></td>
+              <td class="text-center py-2 px-4"><button id="date-3" class="circle-button hover:bg-pink-500  text-black">3</button></td>
+              <td class="text-center py-2 px-4"><button id="date-4" class="circle-button hover:bg-pink-500  text-black">4</button></td>
+              <td class="text-center py-2 px-4"><button id="date-5" class="circle-button hover:bg-pink-500  text-black">5</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="flex items-center justify-between mt-6">
+         
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Pick Appointment Time For  </h2>
+        <div class="flex items-center justify-center mt-16">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 13.5v3.75m-9-6.75h9m0 0h9M3 12h18M12 9.75v-3.75m9 6.75h-9m0 0h-9" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center mt-8">Oopz!</h3>
+        <p class="text-gray-600 text-center mt-2">No Slot Available On This Date.</p>
+      </div>
+    </div>
+  </main>
+  <div class="button-container">
+    <a href="index.html" class="btn btn-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back
+    </a>
+    <a href="login.html" class="btn btn-next">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+    </a>
+  </div>
+<footer class="bg-white py-4 text-center mt-12">
+  <p class="text-gray-700">
+      <a href="#" class="text-pink-500 hover:text-pink-700">Duodector 2024</a>. Designed by Righttheresolutions
+  </p>
+</footer>
+
+</body>
+</html>
